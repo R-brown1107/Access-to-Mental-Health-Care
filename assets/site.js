@@ -39,11 +39,11 @@
         scene.style.transform = "scale(2.7)";
       } else if (i === index) {
         // Current image zooms toward a focal point as the next full-bleed scene opens from that point.
-        scene.style.opacity = String(1 - clamp((local - 0.72) / 0.28, 0, 1));
+        scene.style.opacity = String(1 - clamp((local - 0.85) / 0.15, 0, 1));
         scene.style.clipPath = "circle(150% at 65% 43%)";
-        scene.style.transform = `scale(${1 + local * 1.75})`;
+        scene.style.transform = `scale(${1 + local * 0.45})`;
       } else if (i === index + 1) {
-        const reveal = clamp((local - 0.22) / 0.78, 0, 1);
+        const reveal = clamp((local - 0.10) / 0.90, 0, 1);
         const radius = reveal * 150;
         scene.style.clipPath = `circle(${radius}% at 65% 43%)`;
         scene.style.opacity = String(reveal);
